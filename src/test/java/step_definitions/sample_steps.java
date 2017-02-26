@@ -1,6 +1,5 @@
 package step_definitions;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -21,6 +20,21 @@ public class sample_steps {
 
     @Then("^I am watching TV$")
     public void i_am_watching_TV() throws Throwable {
+        System.out.println("I got Then");
+    }
+
+    @Given("^I am on second test$")
+    public void iAmOnSecondTest() throws Throwable {
+        System.out.println("I got second Given");
+    }
+
+    @When("^I start second test$")
+    public void iStartSecondTest() throws Throwable {
+        System.out.println("I got When");
+    }
+
+    @Then("^I am testing$")
+    public void iAmTesting() throws Throwable {
         System.out.println("I got Then");
     }
 }
