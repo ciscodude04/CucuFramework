@@ -9,3 +9,5 @@ Feature: Here i am
       Given I am on second test
       When I start second test
       Then I am testing
+
+      Scenario: Another Scenario
