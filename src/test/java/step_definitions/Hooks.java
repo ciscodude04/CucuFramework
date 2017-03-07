@@ -12,11 +12,10 @@ import org.openqa.selenium.WebDriverException;
 
 import java.io.IOException;
 
-
 /**
  * Created by Cisco on 3/6/2017.
  */
-public class Hooks {
+public class Hooks extends Drivers {
     public static WebDriver driver;
     @Before
     public void openBrowser() {
@@ -29,7 +28,6 @@ public class Hooks {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
     @After
