@@ -10,4 +10,3 @@ Feature: Here i am
       When I start second test
       Then I am testing
 
-      Scenario: Another Scenario
