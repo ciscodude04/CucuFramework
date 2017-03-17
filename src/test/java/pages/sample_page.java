@@ -5,6 +5,8 @@ package pages;
  */
 public class sample_page extends BasePage {
 
+    public static void login(){
 
+    }
 
 }

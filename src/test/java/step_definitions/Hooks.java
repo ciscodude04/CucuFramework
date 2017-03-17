@@ -23,7 +23,7 @@ public class Hooks extends Drivers {
         try {
             data = new Propertycaller();
             System.out.println("Called openBrowser");
-            Drivers.initialize(data.getbrowser(), data.gettestUrl(), null);
+            Drivers.initialize("chrome", data.gettestUrl(), null);
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -34,13 +34,13 @@ public class Hooks extends Drivers {
     public void embedScreenshot(Scenario scenario){
         if(scenario.isFailed()) {
             try {
-                scenario.write("Current Page URL is " + driver.getCurrentUrl());
-                byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+                scenario.write("Current Page URL is " + instance.getCurrentUrl());
+                byte[] screenshot = ((TakesScreenshot) instance).getScreenshotAs(OutputType.BYTES);
                 scenario.embed(screenshot, "image/png");
             } catch (WebDriverException somePlatformDontSupportScreenshots) {
                 System.err.println(somePlatformDontSupportScreenshots.getMessage());
             }
         }
-        driver.quit();
+        instance.quit();
     }
 }

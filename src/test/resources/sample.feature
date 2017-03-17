@@ -10,3 +10,8 @@ Feature: Here i am
       When I start second test
       Then I am testing
 
+      Scenario: Browser Test
+        Given I navigate to "www.yahoo.com"
+        When I enter valid credentials
+        Then I am taken to messages page
+
