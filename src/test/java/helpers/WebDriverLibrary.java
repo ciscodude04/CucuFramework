@@ -26,9 +26,9 @@ public class WebDriverLibrary {
         return Drivers.instance;
     }
 
+
     public static void clickbycssName(String name, String Selection){
         WebElement x = driver().findElement(By.className(name));
-
     }
 
     public static void clickbypartiaLink(String partialink) {
