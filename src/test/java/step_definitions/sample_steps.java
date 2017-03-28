@@ -49,12 +49,12 @@ public class sample_steps {
 
     @Given("^I navigate to \"([^\"]*)\"$")
     public void iNavigateTo(String url) throws Throwable {
-        System.setProperty("webdriver.chrome.driver", "C:/ChromeDriver/chromedriver.exe");
-        System.setProperty("webdriver.chrome.silentOutput", "true");
-        WebDriver driver = new ChromeDriver();
+//        System.setProperty("webdriver.chrome.driver", "C:/ChromeDriver/chromedriver.exe");
+//        System.setProperty("webdriver.chrome.silentOutput", "true");
+//        WebDriver driver = new ChromeDriver();
 //        driver.manage().window().maximize();
-        driver.get(url);
-        driver.close();
+//        driver.get(url);
+
 //        driver.navigate().to(url);
 
     }

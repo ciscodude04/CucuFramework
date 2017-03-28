@@ -11,7 +11,7 @@ import java.util.Properties;
 public class Propertycaller {
 
     protected Properties prop = null;
-    protected InputStream input = new FileInputStream("src/test/java/resources/Config.properties");
+    protected InputStream input = new FileInputStream("src/test/java/helpers/config.properties");
 
     public Propertycaller() throws IOException {
         prop = new Properties();
@@ -24,5 +24,9 @@ public class Propertycaller {
 
     public String getbrowser(){
         return prop.getProperty("browser");
+    }
+
+    public String getURL() {
+        return prop.getProperty("url");
     }
 }
