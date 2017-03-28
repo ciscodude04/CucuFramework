@@ -29,9 +29,9 @@ public class Drivers {
                 instance.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
             }
             if(browser.equals("chrome")){
-                System.setProperty("webdriver.chrome.driver", "putlocation");
+//                System.setProperty("webdriver.chrome.driver", "putlocation");
                 System.setProperty("webdriver.chrome.silentOutput", "true");
-                instance = new ChromeDriver();
+//                instance = new ChromeDriver();
                 instance.manage().window().maximize();
                 instance.manage().deleteAllCookies();
                 instance.get(url);

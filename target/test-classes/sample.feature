@@ -11,7 +11,7 @@ Feature: Here i am
       Then I am testing
 
       Scenario: Browser Test
-        Given I navigate to "https://hotmail.com"
+        Given I navigate to "https://www.yahoo.com"
         When I enter valid credentials
         Then I am taken to messages page
 
