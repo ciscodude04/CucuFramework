@@ -1,6 +1,9 @@
 package pages;
 
 
+import static com.codeborne.selenide.Selenide.$;
+
+
 /**
  * Created by Cisco on 3/6/2017.
  */
@@ -15,5 +18,8 @@ public class BasePage {
 
     public static void gotothirdStep() {
         System.out.println("Got to third step");
+        $("#noname").click();
+//        $("#names").shouldHave(size(3));
+
     }
 }
