@@ -7,6 +7,7 @@ import cucumber.api.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import pages.BasePage;
 
 /**
  * Created by Cisco on 2/25/2017.
@@ -48,23 +49,17 @@ public class sample_steps {
     }
 
     @Given("^I navigate to \"([^\"]*)\"$")
-    public void iNavigateTo(String url) throws Throwable {
-//        System.setProperty("webdriver.chrome.driver", "C:/ChromeDriver/chromedriver.exe");
-//        System.setProperty("webdriver.chrome.silentOutput", "true");
-//        WebDriver driver = new ChromeDriver();
-//        driver.manage().window().maximize();
-//        driver.get(url);
-
-//        driver.navigate().to(url);
-
+    public void iNavigateTo(String url) {
+        BasePage.gotohomePage();
     }
 
     @When("^I enter valid credentials$")
     public void iEnterValidCredentials() throws Throwable {
+        BasePage.gotosecondStep();
     }
 
     @Then("^I am taken to messages page$")
-    public void iAmTakenToMessagesPage() throws Throwable {
-        Assert.assertTrue("Inbox", true);
+    public void iAmTakenToMessagesPage()  {
+        BasePage.gotothirdStep();
     }
 }
