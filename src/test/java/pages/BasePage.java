@@ -18,7 +18,7 @@ public class BasePage {
 
     public static void gotothirdStep() {
         System.out.println("Got to third step");
-        $("#noname").click();
+//        $("#noname").click();
 //        $("#names").shouldHave(size(3));
 
     }

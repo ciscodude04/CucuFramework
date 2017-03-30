@@ -5,6 +5,8 @@ import com.codeborne.selenide.junit.ScreenShooter;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
+import org.apache.log4j.BasicConfigurator;
+import org.apache.log4j.varia.NullAppender;
 import org.junit.Rule;
 
 
@@ -18,8 +20,10 @@ public class Hooks {
 
     @Before
     public void openBrowser() {
+//        BasicConfigurator.configure(new NullAppender());
         System.setProperty("webdriver.chrome.driver", "C:/ChromeDriver/chromedriver.exe");
         System.setProperty("selenide.browser","Chrome");
+        System.setProperty("java.util.logging.SimpleFormatter.format", "%1$tT %4$s %5$s%6$s%n");
         open("https://www.google.com");
         Configuration.reportsFolder = "src/test/java/screenshots";
     }
