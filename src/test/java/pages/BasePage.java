@@ -1,6 +1,9 @@
 package pages;
 
 
+import org.openqa.selenium.By;
+
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 
 
@@ -21,5 +24,14 @@ public class BasePage {
 //        $("#noname").click();
 //        $("#names").shouldHave(size(3));
 
+    }
+
+    public static void createnewAccount() {
+        $(".li.li-link-profile").click();
+        $(By.partialLinkText("New Registration")).click();
+    }
+
+    public static void loggedIn() {
+        $("").shouldHave(text("Welcome"));
     }
 }

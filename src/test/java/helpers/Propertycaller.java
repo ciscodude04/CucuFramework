@@ -11,7 +11,7 @@ import java.util.Properties;
 public class Propertycaller {
 
     protected Properties prop = null;
-    protected InputStream input = new FileInputStream("src/test/java/helpers/config.properties");
+    protected InputStream input = new FileInputStream("src/test/resources/config.properties");
 
     public Propertycaller() throws IOException {
         prop = new Properties();

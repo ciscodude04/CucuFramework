@@ -1,17 +1,15 @@
 Feature: Here i am
 
-  Scenario: My first test
-    Given I am here
-    When I sit on sofa
-    Then I am watching TV
+  Scenario: Browser Test
+    Given I navigate to "https://www.yahoo.com"
+    When I enter valid credentials
+    Then I am taken to messages page
 
-    Scenario: My second test
-      Given I am on second test
-      When I start second test
-      Then I am testing
+  Scenario: Land on Josh Page
+    Given I click on "Coding Experience"
+    Then I land on coding page
 
-      Scenario: Browser Test
-        Given I navigate to "https://www.yahoo.com"
-        When I enter valid credentials
-        Then I am taken to messages page
-
+    Scenario: Play Josh Game
+      Given I land on "My Projects"
+      When I enter the data
+      Then I either win or lose
