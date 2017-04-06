@@ -1,14 +1,11 @@
 package step_definitions;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import org.junit.Assert;
+//import org.apache.log4j.Logger;
+
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import pages.BasePage;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
@@ -20,9 +17,12 @@ import static com.codeborne.selenide.Selenide.$;
  */
 public class sample_steps {
 
+//    static Logger logger = Logger.getLogger(sample_steps.class);
+
     @Given("^I click on \"([^\"]*)\"$")
     public void i_click_on(String arg1) {
         $("#Code").click();
+//        logger.debug("I clicked on this");
 
     }
 
@@ -50,7 +50,7 @@ public class sample_steps {
 
     @Then("^I either win or lose$")
     public void i_either_win_or_lose() {
-        $(byText("Guess the Band")).shouldBe(visible);
+        $(byText("You got the third one wrong!33")).shouldBe(visible);
 
     }
 
