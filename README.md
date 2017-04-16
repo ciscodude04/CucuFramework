@@ -14,5 +14,8 @@ http://toolsqa.com/selenium-webdriver/how-to-use-geckodriver/
 Download ChromeDriver locally and setup env variable
 https://sites.google.com/a/chromium.org/chromedriver/downloads
 
+Setup Maven on Windows
+https://www.youtube.com/watch?v=OfCTUGpWEdE
+
 Download Project
 
