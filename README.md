@@ -7,6 +7,10 @@ The following needs to be Downloaded
 Add Gecko driver locally and setup env variable
 https://github.com/mozilla/geckodriver/releases/tag/v0.9.0
 
+Read up on Gecko and Firefox
+http://toolsqa.com/selenium-webdriver/how-to-use-geckodriver/
+
+
 Download ChromeDriver locally and setup env variable
 https://sites.google.com/a/chromium.org/chromedriver/downloads
 
