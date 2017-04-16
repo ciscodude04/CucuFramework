@@ -17,7 +17,7 @@ public class Hooks{
 
     @Before
     public void openBrowser() {
-        //TODO: THis is the startup for Selenide
+        //TODO: This is the startup for Selenide
         System.setProperty("webdriver.chrome.driver", "C:/ChromeDriver/chromedriver.exe");
         System.setProperty("selenide.browser","chrome");
         System.setProperty("java.util.logging.SimpleFormatter.format", "%1$tT %4$s %5$s%6$s%n");
