@@ -8,8 +8,4 @@ import org.openqa.selenium.chrome.ChromeDriver;
  */
 public class Drivers {
 
-    public static WebDriver instance;
-
-
-
 }
