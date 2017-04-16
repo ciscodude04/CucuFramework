@@ -17,8 +17,8 @@ public class GamePageSteps {
     }
 
     @Given("^I click on \"([^\"]*)\"$")
-    public void i_click_on(String arg1)  {
-        HomePage.ClickOn("My Projects");
+    public void i_click_on(String link)  {
+        HomePage.ClickOn(link);
     }
 
     @Given("^I enter answers$")

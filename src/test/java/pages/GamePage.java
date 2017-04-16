@@ -2,6 +2,7 @@ package pages;
 
 import com.codeborne.selenide.Condition;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 
 /**
@@ -24,6 +25,6 @@ public class GamePage {
     }
 
     public static void checkResults() {
-        $("#calculation").shouldHave(Condition.text("Better luck next time"));
+        $("#calculation").shouldHave(text("Better luck next time"));
     }
 }

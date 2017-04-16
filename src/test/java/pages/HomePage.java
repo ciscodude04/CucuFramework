@@ -1,7 +1,10 @@
 package pages;
 
+import com.codeborne.selenide.Condition;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 
 /**
@@ -10,6 +13,10 @@ import static com.codeborne.selenide.Selenide.$;
 public class HomePage {
 
     public static void ClickOn(String link) {
-        $("#Project").click();
+        $(By.partialLinkText(link)).click();
+    }
+
+    public static void VerifyLinks(String link) {
+        $(By.partialLinkText(link)).shouldNotBe(visible);
     }
 }
