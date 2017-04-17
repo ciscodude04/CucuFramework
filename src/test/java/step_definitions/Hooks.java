@@ -25,7 +25,6 @@ public class Hooks{
         System.setProperty("webdriver.chrome.driver", "C:/ChromeDriver/chromedriver.exe");
         System.setProperty("selenide.browser","chrome");
         System.setProperty("java.util.logging.SimpleFormatter.format", "%1$tT %4$s %5$s%6$s%n");
-        System.setProperty("allure.results.directory", "src/test/java/report");
         open("https://jdstartup2017.000webhostapp.com/");
         Configuration.reportsFolder = "src/test/screenshots";
         Configuration.screenshots = false;
