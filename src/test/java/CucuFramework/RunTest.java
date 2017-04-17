@@ -9,9 +9,8 @@ import org.junit.runner.RunWith;
  */
 @RunWith(Cucumber.class)
 @CucumberOptions(
-//        features={"src/test/resources"},
-        features={"format", "json:target/cucumber.json"}
+        features={"src/test/resources"}, glue={"step_definitions"}, tags ={"~@Test"}
 )
-public class CukeRunner {
+public class RunTest {
 
 }
