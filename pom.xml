@@ -13,7 +13,7 @@
   <properties>
     <jetty.http.port>9000</jetty.http.port>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <allure.version>1.4.0.RC9</allure.version>
+    <allure.version>1.4.16</allure.version>
     <aspectj.version>1.8.10</aspectj.version>
   </properties>
 
@@ -113,7 +113,7 @@
         <version>9.4.3.v20170317</version>
         <configuration>
           <webAppSourceDirectory>
-            ${project.build.directory}/site/allure-maven-plugin
+            ${project.build.directory}/target/allure-maven-plugin
           </webAppSourceDirectory>
           <httpConnector>
             <port>
@@ -133,6 +133,9 @@
         <groupId>ru.yandex.qatools.allure</groupId>
         <artifactId>allure-maven-plugin</artifactId>
         <version>2.5</version>
+        <configuration>
+          <!--<reportDirectory>allure-report</reportDirectory>-->
+        </configuration>
       </plugin>
     </plugins>
   </reporting>
