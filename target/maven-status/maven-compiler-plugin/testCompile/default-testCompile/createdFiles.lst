@@ -3,8 +3,8 @@ pages\BasePage.class
 pages\BirthDayPage.class
 pages\HomePage.class
 step_definitions\GamePageSteps.class
+CucuFramework\RunTest.class
 helpers\Drivers.class
 pages\GamePage.class
-CucuFramework\CukeRunner.class
 step_definitions\BirthDayPageSteps.class
 step_definitions\HomePageSteps.class

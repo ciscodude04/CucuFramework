@@ -7,6 +7,10 @@ import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import org.openqa.selenium.WebDriverException;
 
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import static com.codeborne.selenide.Selenide.open;
 
 
@@ -21,8 +25,9 @@ public class Hooks{
         System.setProperty("webdriver.chrome.driver", "C:/ChromeDriver/chromedriver.exe");
         System.setProperty("selenide.browser","chrome");
         System.setProperty("java.util.logging.SimpleFormatter.format", "%1$tT %4$s %5$s%6$s%n");
+        System.setProperty("allure.results.directory", "src/test/java/report");
         open("https://jdstartup2017.000webhostapp.com/");
-        Configuration.reportsFolder = "src/test/java/screenshots";
+        Configuration.reportsFolder = "src/test/screenshots";
         Configuration.screenshots = false;
     }
 
@@ -31,7 +36,8 @@ public class Hooks{
 
         if (scenario.isFailed()) {
             try {
-                Selenide.screenshot(scenario.getName());
+                String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
+                String.format(Selenide.screenshot(scenario.getName() + "_" + timeStamp));
             } catch (WebDriverException somePlatformDontSupportScreenshots) {
 //                logger.info(somePlatformDontSupportScreenshots);
             }

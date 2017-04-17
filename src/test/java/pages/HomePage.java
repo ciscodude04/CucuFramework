@@ -19,4 +19,8 @@ public class HomePage {
     public static void VerifyLinks(String link) {
         $(By.partialLinkText(link)).shouldNotBe(visible);
     }
+
+    public static void MenuPresent() {
+        $(By.partialLinkText("Home")).shouldBe((visible));
+    }
 }
