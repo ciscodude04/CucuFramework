@@ -2,12 +2,11 @@ package helpers;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.WebDriverRunner;
+
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.firefox.FirefoxBinary;
+import org.openqa.selenium.firefox.MarionetteDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
 
 import static com.codeborne.selenide.Selenide.open;
 
@@ -25,13 +24,6 @@ public class Drivers {
             open(url);
         }
         else if(browser.equals("firefox")) {
-            System.setProperty("webdriver.gecko.driver", "C:/ChromeDriver/geckodriver.exe");
-//            DesiredCapabilities cap = DesiredCapabilities.firefox();
-//            cap.setCapability("marionette", true);
-//            FirefoxProfile myProfile = new FirefoxProfile();
-//            myProfile.setAcceptUntrustedCertificates(true);
-//            WebDriverRunner.setWebDriver(new Marione);
-//            System.setProperty("selenide.browser", "marionette");
             open(url);
         }
         else if(browser.equals("headless")) {

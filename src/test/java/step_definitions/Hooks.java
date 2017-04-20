@@ -1,7 +1,6 @@
 package step_definitions;
 
 import com.codeborne.selenide.Selenide;
-
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
@@ -20,7 +19,7 @@ public class Hooks{
 
     @Before
     public void openBrowser() {
-        Drivers.Initialize("chrome", "https://jdstartup2017.000webhostapp.com/", "");
+        Drivers.Initialize("headless", "https://jdstartup2017.000webhostapp.com/", "");
     }
 
     @After
