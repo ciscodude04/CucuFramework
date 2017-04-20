@@ -10,8 +10,6 @@ import org.openqa.selenium.WebDriverException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-
-
 /**
  * Created by Cisco on 3/6/2017.
  */
@@ -19,7 +17,7 @@ public class Hooks{
 
     @Before
     public void openBrowser() {
-        Drivers.Initialize("headless", "https://jdstartup2017.000webhostapp.com/", "");
+        Drivers.Initialize("chrome", "https://jdstartup2017.000webhostapp.com/", "");
     }
 
     @After
