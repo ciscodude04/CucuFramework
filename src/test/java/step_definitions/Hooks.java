@@ -30,7 +30,7 @@ public class Hooks{
             } catch (WebDriverException somePlatformDontSupportScreenshots) {
             }
         }
-        Selenide.close();
+        Drivers.Close();
     }
 
 }

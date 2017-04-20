@@ -20,7 +20,7 @@ public class GamePage {
         System.out.println("HERE I AM AND READ IT -----> " + dh.lastName());
         $("#response1").setValue(dh.firstName());
         $("#response2").setValue(dh.lastName());
-        sleep(5000);
+//        sleep(5000);
         $("#response3").setValue("Something 3");
         $("#response4").setValue("SOmething 5");
         $("#response5").setValue("Something 5");
