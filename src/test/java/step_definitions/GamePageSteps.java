@@ -11,7 +11,6 @@ import pages.HomePage;
  */
 public class GamePageSteps {
 
-
     @Given("^I am on home page$")
     public void iAmOnHomePage() {
     }
