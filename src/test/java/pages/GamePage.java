@@ -1,30 +1,26 @@
 package pages;
 
-import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.Selenide;
-import helpers.TestDataHelpers;
+import org.fluttercode.datafactory.impl.DataFactory;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.sleep;
 
 /**
  * Created by Cisco Punns on 4/15/2017.
  */
 public class GamePage {
 
-    public static TestDataHelpers dh = new TestDataHelpers();
+    public static DataFactory df = new DataFactory();
 
     public static void EnterData() {
-        System.out.println("HERE I AM AND READ IT -----> " + dh.firstName());
-        System.out.println("HERE I AM AND READ IT -----> " + dh.lastName());
-        $("#response1").setValue(dh.firstName());
-        $("#response2").setValue(dh.lastName());
-//        sleep(5000);
-        $("#response3").setValue("Something 3");
-        $("#response4").setValue("SOmething 5");
-        $("#response5").setValue("Something 5");
-        $("#response6").setValue("Something 6");
+        System.out.println("HERE I AM AND READ IT -----> " + df.getFirstName());
+        System.out.println("HERE I AM AND READ IT -----> " + df.getLastName());
+        $("#response1").setValue(df.getFirstName());
+        $("#response2").setValue(df.getFirstName());
+        $("#response3").setValue(df.getFirstName());
+        $("#response4").setValue(df.getFirstName());
+        $("#response5").setValue(df.getFirstName());
+        $("#response6").setValue(df.getFirstName());
         $("button[type*='button']").click();
     }
 
