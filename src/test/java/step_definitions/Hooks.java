@@ -17,7 +17,7 @@ public class Hooks{
 
     @Before
     public void openBrowser() {
-        Drivers.Initialize("phantomjs", "https://jdstartup2017.000webhostapp.com/", "");
+        Drivers.Initialize("chrome", "https://jdstartup2017.000webhostapp.com/", "");
     }
 
     @After
